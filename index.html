@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#263b32">
+<title>Shubham & Shubhangi | Wedding Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=Great+Vibes&display=swap');
+:root{--green:#263b32;--sage:#9eaa91;--ivory:#f7f1e7;--paper:#fffaf1;--gold:#b99a60;--ink:#344238;--muted:#777b6e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300}
+button{font:inherit}.cover-screen{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:radial-gradient(ellipse at center,#526858,#1e3028 75%);padding:24px;transition:opacity 1s,visibility 1s}.cover-screen.opened{opacity:0;visibility:hidden;pointer-events:none}
+.cover{position:relative;width:min(390px,88vw);height:min(690px,82vh);min-height:500px;background:linear-gradient(135deg,#b8c0a9,#8c9a83);border:1px solid #d8c9a1;box-shadow:0 25px 80px #0b1711a8;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cover:before,.cover:after{content:"";position:absolute;inset:15px;border:1px solid #e1d6b8;pointer-events:none}.cover:after{inset:23px;border:1px solid #d4c5a0}
+.botanical{position:absolute;color:#e6dcc1;opacity:.7;font-size:70px;line-height:1}.botanical.tl{top:30px;left:28px}.botanical.br{bottom:30px;right:28px;transform:rotate(180deg)}
+.cover-copy{text-align:center;z-index:1;padding:35px;color:#263a30}.cover-copy .ganesh{font-size:35px;color:#f7edda;margin-bottom:28px}.cover-copy small{letter-spacing:4px;text-transform:uppercase;font-size:9px}.cover-copy h1{font-family:'Great Vibes',cursive;font-size:48px;font-weight:400;line-height:1.25;margin:18px 0}.cover-copy p{font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:2px}
+.thread{position:absolute;inset:0;pointer-events:none}.thread-line{position:absolute;background:#c6a66b;box-shadow:0 1px 2px #31403466}.thread-line.v{width:3px;height:100%;left:50%;transform:translateX(-50%)}.thread-line.h{height:3px;width:100%;top:50%;transform:translateY(-50%)}
+.thread-knot{position:absolute;left:50%;top:50%;width:76px;height:76px;transform:translate(-50%,-50%);border:2px solid #d5b778;border-radius:50%;background:#82947a;color:#f8edcf;display:grid;place-items:center;box-shadow:0 3px 10px #1d302a55;cursor:grab;touch-action:none;z-index:3;font-size:23px}.thread-knot:active{cursor:grabbing}.thread-knot:before,.thread-knot:after{content:"";position:absolute;width:34px;height:34px;border:2px solid #d5b778;border-radius:50% 50% 50% 0;transform:rotate(45deg);pointer-events:none}.thread-knot:after{transform:rotate(225deg)}.thread-tail{position:absolute;left:calc(50% + 36px);top:calc(50% + 35px);height:90px;width:3px;background:linear-gradient(#c6a66b,#e6d4a7);transform:rotate(-22deg);transform-origin:top;filter:drop-shadow(1px 1px 1px #31403466)}.pull-hint{position:absolute;bottom:94px;left:0;right:0;text-align:center;color:#f5ebd6;font-size:9px;letter-spacing:3px;z-index:2;animation:pulse 1.7s infinite}@keyframes pulse{50%{opacity:.45}}
+.open-btn{position:absolute;bottom:42px;left:50%;transform:translateX(-50%);border:1px solid #e7d7b2;color:#f7f0df;background:#263b32c9;padding:13px 25px;letter-spacing:2px;text-transform:uppercase;font-size:10px;cursor:pointer;z-index:2;white-space:nowrap}
+.open-btn:hover{background:#18291f}
+main{max-width:760px;margin:auto;background:var(--paper);min-height:100vh;box-shadow:0 0 50px #3b44351a}
+section{padding:76px 28px;text-align:center;position:relative}.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500}h2{font-size:42px;line-height:1.1;margin:12px 0 18px;color:var(--green)}.script{font-family:'Great Vibes',cursive;color:var(--green);font-size:43px}.intro{background:linear-gradient(#f8f2e8e8,#f8f2e8e8),radial-gradient(ellipse,#d9ddcf,#fffaf1);padding-top:90px;padding-bottom:90px}.ganesh-large{font-size:48px;color:var(--gold);margin-bottom:22px}.intro p,.copy{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.65;max-width:540px;margin:14px auto;color:#5d665b}.names{font-family:'Great Vibes',cursive;font-size:clamp(54px,12vw,82px);line-height:1.15;color:var(--green);margin:18px 0}.amp{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:38px}
+.ornament{color:var(--gold);font-size:22px;letter-spacing:8px;margin:18px}.story{background:#edf0e7}.photo-placeholder{width:min(390px,100%);height:330px;margin:28px auto;background:linear-gradient(145deg,#d5d9ca,#aab6a3);border:10px solid #fffaf1;box-shadow:0 10px 35px #263b3218;display:grid;place-items:center;color:#596a59;font-family:'Cormorant Garamond',serif;font-size:19px;padding:30px}
+.events{background:#f8f2e8}.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:32px auto;max-width:590px}.event{border:1px solid #d9caa9;padding:25px 12px;background:#fffdf8}.event .symbol{font-size:26px;color:var(--gold)}.event h3{font-size:27px;margin:8px 0}.event p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.countdown{background:var(--green);color:#f8f2e8}.countdown h2{color:#f8f2e8}.timer{display:flex;justify-content:center;gap:12px;margin-top:28px}.timebox{min-width:64px;border:1px solid #b99a6080;padding:14px 8px}.timebox b{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400}.timebox span{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d5c8a7}
+.venue{background:#edf0e7}.map-btn,.rsvp-btn{display:inline-block;margin-top:22px;padding:13px 24px;border:1px solid var(--green);color:var(--green);text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:10px}.rsvp{background:#f8f2e8}.rsvp-btn{background:var(--green);color:#fffaf1;border-color:var(--green);cursor:pointer}.footer{background:var(--green);color:#e9dfc8;padding:42px 20px;text-align:center}.footer .script{color:#e9dfc8}.fine{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#aeb9a8}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:480px){section{padding:62px 20px}.event-grid{gap:9px}.event{padding:20px 8px}.timer{gap:6px}.timebox{min-width:58px}.cover{height:78vh}}
+</style>
+</head>
+<body>
+<div class="cover-screen" id="cover">
+  <div class="cover" id="envelope">
+    <span class="botanical tl">❧</span><span class="botanical br">❧</span>
+    <div class="cover-copy">
+      <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+      <small>With the blessings of our families</small>
+      <h1>Shubham <span style="font-family:'Cormorant Garamond';font-size:30px">&</span><br>Shubhangi</h1>
+      <p>ARE BEGINNING A BEAUTIFUL JOURNEY</p>
+    </div>
+    <div class="thread" id="thread">
+      <div class="thread-line v"></div><div class="thread-line h"></div>
+      <div class="thread-tail" id="threadTail"></div>
+      <button class="thread-knot" id="threadKnot" aria-label="Pull the golden thread" title="Pull the golden thread"><span>✦</span></button>
+    </div>
+    <div class="pull-hint" id="pullHint">PULL THE GOLDEN THREAD</div>
+    <button class="open-btn" id="openBtn">Or tap to open invitation</button>
+  </div>
+</div>
+<main>
+<section class="intro">
+  <div class="ganesh-large">॥ श्री गणेशाय नमः ॥</div>
+  <div class="eyebrow">Together with our families</div>
+  <div class="names">Shubham <span class="amp">&</span><br>Shubhangi</div>
+  <div class="ornament">✦ ❧ ✦</div>
+  <h2 style="font-size:32px">Request the pleasure of your company</h2>
+  <p>As two hearts begin a new chapter, we would be honoured to have you by our side as we celebrate love, laughter, family and forever.</p>
+  <div class="script">With love, we invite you</div>
+</section>
+<section class="story reveal">
+  <div class="eyebrow">A little about us</div><h2>Two stories. One journey.</h2>
+  <div class="photo-placeholder">Your favourite photograph goes here</div>
+  <p class="copy">Some journeys are written in the stars. Ours brought two families together and gave us a lifetime of memories still waiting to be made.</p>
+</section>
+<section class="events reveal">
+  <div class="eyebrow">Save the celebrations</div><h2>Wedding festivities</h2><p class="copy">A few beautiful moments, made unforgettable with you.</p>
+  <div class="event-grid">
+    <div class="event"><div class="symbol">✿</div><h3>Mehendi</h3><p>DATE TO BE ANNOUNCED<br>TIME & VENUE TO FOLLOW</p></div>
+    <div class="event"><div class="symbol">❀</div><h3>Haldi</h3><p>DATE TO BE ANNOUNCED<br>TIME & VENUE TO FOLLOW</p></div>
+    <div class="event"><div class="symbol">♫</div><h3>Sangeet</h3><p>DATE TO BE ANNOUNCED<br>TIME & VENUE TO FOLLOW</p></div>
+    <div class="event"><div class="symbol">♡</div><h3>Wedding</h3><p>DATE TO BE ANNOUNCED<br>TIME & VENUE TO FOLLOW</p></div>
+  </div>
+</section>
+<section class="countdown reveal">
+  <div class="eyebrow" style="color:#d4bd8d">The countdown begins</div><h2>Until forever</h2>
+  <p style="font-family:'Cormorant Garamond';font-size:18px;color:#e5dfd0">Our special day is getting closer</p>
+  <div class="timer"><div class="timebox"><b id="days">--</b><span>Days</span></div><div class="timebox"><b id="hours">--</b><span>Hours</span></div><div class="timebox"><b id="mins">--</b><span>Minutes</span></div><div class="timebox"><b id="secs">--</b><span>Seconds</span></div></div>
+  <p class="fine" style="margin-top:25px">Wedding date will be added soon</p>
+</section>
+<section class="venue reveal">
+  <div class="eyebrow">Where we celebrate</div><h2>The wedding venue</h2>
+  <p class="copy">We cannot wait to celebrate with you. Venue and travel details will be shared here.</p>
+  <p style="font-family:'Cormorant Garamond';font-size:23px;color:var(--green)">Venue details coming soon</p>
+  <a class="map-btn" href="#" onclick="return false">Map link coming soon</a>
+</section>
+<section class="rsvp reveal">
+  <div class="eyebrow">It wouldn't be the same without you</div><h2>Will you join us?</h2>
+  <p class="copy">Your presence is the greatest gift. Please let us know if you can celebrate with us.</p>
+  <a class="rsvp-btn" href="https://forms.google.com/" target="_blank" rel="noopener">RSVP · Link to be added</a>
+</section>
+<div class="footer"><div class="script">Shubham & Shubhangi</div><div class="ornament">✦ ❧ ✦</div><div class="fine">Made with love · Together with our families</div></div>
+</main>
+<script>
+const cover=document.getElementById('cover'), btn=document.getElementById('openBtn'), thread=document.getElementById('thread');
+const knot=document.getElementById('threadKnot'), hint=document.getElementById('pullHint');
+let pulling=false,startY=0,dragY=0,opened=false;
+function openInvitation(){
+  if(opened)return; opened=true;
+  hint.style.opacity='0';
+  thread.animate([{transform:'translateY(0) scale(1)',opacity:1},{transform:'translate(18px,-135%) rotate(12deg) scale(.8)',opacity:0}],{duration:900,easing:'cubic-bezier(.2,.75,.2,1)',fill:'forwards'});
+  document.getElementById('envelope').animate([{transform:'scale(1)'},{transform:'scale(1.035) rotateX(5deg)'},{transform:'scale(.96) translateY(-8px)'}],{duration:1050,easing:'ease-in-out'});
+  setTimeout(()=>{cover.classList.add('opened');document.body.style.overflow='auto'},900);
+}
+knot.addEventListener('pointerdown',e=>{if(opened)return;pulling=true;startY=e.clientY;dragY=0;knot.setPointerCapture(e.pointerId);});
+knot.addEventListener('pointermove',e=>{if(!pulling||opened)return;dragY=Math.max(-12,Math.min(170,e.clientY-startY));knot.style.transform=`translate(-50%,calc(-50% + ${dragY}px)) rotate(${dragY/3}deg)`;document.querySelector('.thread-line.v').style.transform=`translateX(-50%) scaleY(${Math.max(.25,1-dragY/220)})`;});
+knot.addEventListener('pointerup',()=>{if(!pulling)return;pulling=false;if(dragY>85){openInvitation()}else{knot.animate([{transform:knot.style.transform},{transform:'translate(-50%,-50%)'}],{duration:350,fill:'forwards'});document.querySelector('.thread-line.v').style.transform='translateX(-50%) scaleY(1)';}});
+knot.addEventListener('pointercancel',()=>{pulling=false;knot.style.transform='translate(-50%,-50%)'});
+btn.addEventListener('click',openInvitation);
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Set the wedding date in ISO format when confirmed, e.g. 2027-02-14T18:00:00+05:30
+const weddingDate=null;
+function tick(){if(!weddingDate)return;let diff=new Date(weddingDate)-new Date();if(diff<0)diff=0;const vals=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60];['days','hours','mins','secs'].forEach((id,i)=>document.getElementById(id).textContent=String(vals[i]).padStart(2,'0'))}
+tick();setInterval(tick,1000);
+</script>
+</body></html>
